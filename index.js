@@ -49,15 +49,15 @@ api.get('/:param', async (req, res) => {
   }
 })
 
-api.get('/e/:param', async (req, res) => {
+api.get(['/e/:param', '/encode/:param'], async (req, res) => {
   res.send(encode(req.params.param))
 })
 
-api.get('/d/:param', async (req, res) => {
+api.get(['/d/:param', '/decode/:param'], async (req, res) => {
   res.send(decode(req.params.param))
 })
 
-api.get('/is/:param', async (req, res) => {
+api.get(['/is/:param', '/isBase64/:param'], async (req, res) => {
   res.send(isBase64(req.params.param))
 })
 
@@ -69,6 +69,7 @@ api.get('/', (req, res) => {
     /:param    ~ if :param is a valid base 64 hash it will be decoded an returned
                  if the decoded hash is a valid url then you will automatically be redirected to it
                   ex: /aHR0cHM6Ly9nb29nbGUuY29t goes to https://google.com
+                 if the hash is not base 64 it will be encoded and returned
 
     /d/:param  ~ decode :param and return it
                  This will not redirect you if the hash is a valid url
