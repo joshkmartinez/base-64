@@ -1,0 +1,19 @@
+{
+  "name": "base-64",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "now dev",
+    "deploy": "now --target production"
+  },
+  "keywords": [],
+  "author": "Joshua Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.16.4",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {}
+}
