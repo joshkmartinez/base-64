@@ -1,0 +1,94 @@
+<html class="gr__64_now_sh">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css" data-asas-style="">
+      body,
+      div,
+      a,
+      p,
+      span {
+        user-select: text !important;
+      }
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        cursor: auto;
+        user-select: text !important;
+      }
+      ::selection {
+        background-color: #338fff !important;
+        color: #fff !important;
+      }
+    </style>
+  </head>
+  <body data-gr-c-s-loaded="true">
+    <h1 id="base64microservice">Base 64 Microservice</h1>
+
+    <h3 id="endpoints">Endpoints:</h3>
+
+    <ul>
+      <li>
+        <code>/:param</code>
+
+        <ul>
+          <li>
+            if :param is a valid base 64 hash it will be decoded an returned
+          </li>
+
+          <li>
+            if the decoded hash is a valid url then you will automatically be
+            redirected to it
+
+            <ul>
+              <li>ex: /aHR0cHM6Ly9nb29nbGUuY29t goes to https://google.com</li>
+            </ul>
+          </li>
+
+          <li>if the hash is not base 64 it will be encoded and returned</li>
+        </ul>
+      </li>
+
+      <li>
+        <code>/d/:param</code>
+
+        <ul>
+          <li>decode :param and return it</li>
+
+          <li>This will not redirect you if the hash is a valid url</li>
+        </ul>
+      </li>
+
+      <li>
+        <code>/e/:param</code>
+
+        <ul>
+          <li>encode :param and return it</li>
+        </ul>
+      </li>
+
+      <li>
+        <code>/is/:param</code>
+
+        <ul>
+          <li>return true if the hash is valid base 64, else return false</li>
+        </ul>
+      </li>
+
+      <li>
+        <code>/rick</code>
+
+        <ul>
+          <li>just try it for yourself</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
