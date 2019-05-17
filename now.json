@@ -1,6 +1,14 @@
 {
   "name": "base 64",
-  "alias": ["64"],
+  "alias": [
+    "64",
+    "b64",
+    "64b",
+    "64-decode",
+    "64-encode",
+    "encode-64",
+    "decode-64"
+  ],
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "routes": [{ "src": "/(.*)", "dest": "index.js" }],
